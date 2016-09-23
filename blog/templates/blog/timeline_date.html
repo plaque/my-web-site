@@ -1,0 +1,15 @@
+{% extends 'blog/timeline.html' %}
+{% block content %}
+    {% for timeline in timelines %}
+        <li>
+	      <div>
+		    <time> {{ timeline.date }} </time>
+            <h2> {{ timeline.title }} </h2>
+		    <p> {{ timeline.text|linebreaksbr }} </p>
+	      </div>
+	      <div class="photo">
+            <img src="static/css/images/Heat.jpg"/>
+          </div>
+        </li>      
+    {% endfor %}
+{% endblock %}
